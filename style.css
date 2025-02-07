@@ -140,13 +140,21 @@ svg{
 
 @media (max-width:393px) {
     #input-new-task {
-        width: 14rem;
+        width: 20rem;
+    }
+    .content-add-item {
+        display:flex;
+        flex-direction: column;
     }
 }
 
 @media (max-width:768px) {
     #input-new-task {
-        width: 16rem;
+        width: 20rem;
+    }
+    .content-add-item {
+        display:flex;
+        flex-direction: column;
     }
 }
 
