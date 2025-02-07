@@ -143,3 +143,10 @@ svg{
         width: 14rem;
     }
 }
+
+@media (max-width:768px) {
+    #input-new-task {
+        width: 16rem;
+    }
+}
+
