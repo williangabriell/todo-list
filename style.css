@@ -43,6 +43,9 @@ svg{
 }
 
 #input-new-task, #btn-new-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     font-size: 1rem;
     outline: none;
@@ -50,7 +53,7 @@ svg{
 }
 
 #input-new-task {
-    width: 20rem;
+    width: 18rem;
     border-radius: 1rem;
 }
 
@@ -133,4 +136,10 @@ svg{
 
 #btn-delete:hover {
     background-color: var(--color-red2);
+}
+
+@media (max-width:393px) {
+    #input-new-task {
+        width: 14rem;
+    }
 }
