@@ -10,6 +10,13 @@
     --color-blue2: #1565C0;
 }
 
+.light-mode {
+    --color-dark: #ffffff;
+    --color-dark2: #f0f0f0;
+    --color-dark3: #e0e0e0;
+    --color-white: #000000;
+}
+
 
 body {
     font-family: 'Roboto';
@@ -136,6 +143,39 @@ svg{
 
 #btn-delete:hover {
     background-color: var(--color-red2);
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-dark2);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--color-dark3);
+    transform: scale(1.1);
+}
+
+.light-mode #theme-toggle {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.light-mode #input-new-task {
+    background-color: var(--color-dark3);
+}
+
+.light-mode #theme-toggle:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
 }
 
 @media (max-width:393px) {

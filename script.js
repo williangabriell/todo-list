@@ -109,3 +109,33 @@ function handleKeyPress(event, index) {
 }
 
 showValues()
+
+const themeStorageKey = 'theme-preference';
+
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('light-mode');
+    
+
+    const isLightMode = body.classList.contains('light-mode');
+    localStorage.setItem(themeStorageKey, isLightMode ? 'light' : 'dark');
+}
+
+function loadTheme() {
+    const savedTheme = localStorage.getItem(themeStorageKey);
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleButton = document.createElement('button');
+    themeToggleButton.id = 'theme-toggle';
+    themeToggleButton.textContent = '🌞/🌙';
+    themeToggleButton.title = 'Alternar tema';
+    themeToggleButton.onclick = toggleTheme;
+    document.body.prepend(themeToggleButton);
+});
+
+
+loadTheme();
